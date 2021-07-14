@@ -1,4 +1,4 @@
-<link href="/development-standards-website/prism-vsc-dark-plus.css" rel="stylesheet">
+<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 <link href="/development-standards-website/style.css" rel="stylesheet">
 
 # Paper Tiger Development Standards

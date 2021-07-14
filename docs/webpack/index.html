@@ -1,0 +1,20 @@
+<link href="../prism-vsc-dark-plus.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+<h1>Paper Tiger Development Standards</h1>
+<div class="nav">
+  <li><a href="../Getting-Started/index.html">Getting Started</a></li>
+  <li><a href="../Git-Standards/index.html">GIT & Github</a></li>
+  <li><a href="../Javascript/index.html">Javascript</a></li>
+  <li><a href="../Twig/index.html">Twig</a></li>
+  <li><a href="../CSS/index.html">CSS</a></li>
+  <li><a href="../Twig/index.html">CraftCMS</a></li>
+  <li><a href="../Twig/index.html">Webpack & Build Proccess</a></li>
+  <li><a href="../deployments/index.html">Deployments</a></li>
+</div>
+<p>We use Webpack to build and compile all our JS/CSS (sometimes images if needed).</p>
+<h3>Commands</h3>
+<ul>
+<li><code>npm i</code> Install all node modules used for the project.</li>
+<li><code>npm run dev</code> Run webpack and watch for changes. Used in development. We use browser-sync to look for changes on port 3000. When running you will find the URL once the initial build have finished</li>
+<li><code>npm run build</code> Build a compiled version of all assets. Mainly used in Production environments so unsure all comments/logs are removed, and everything is minified/gzipped.</li>
+</ul>

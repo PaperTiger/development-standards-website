@@ -1,0 +1,22 @@
+<link href="../prism-vsc-dark-plus.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+<h1>Paper Tiger Development Standards</h1>
+<div class="nav">
+  <li><a href="../Getting-Started/index.html">Getting Started</a></li>
+  <li><a href="../Git-Standards/index.html">GIT & Github</a></li>
+  <li><a href="../Javascript/index.html">Javascript</a></li>
+  <li><a href="../Twig/index.html">Twig</a></li>
+  <li><a href="../CSS/index.html">CSS</a></li>
+  <li><a href="../Twig/index.html">CraftCMS</a></li>
+  <li><a href="../Twig/index.html">Webpack & Build Proccess</a></li>
+  <li><a href="../deployments/index.html">Deployments</a></li>
+</div>
+<h1>Folders &amp; Files</h1>
+<h3>layout/main.twig</h3>
+<p>This file house the base html for the site. All js/css/html will eventually be fed into this file.</p>
+<h3>_app-scripts.twig</h3>
+<p>This file handles adding the scripts to the end of the body. Since we are using webpack to generate a manafest.json file, we will use Craft to read the json and get the path.</p>
+<p>You can find the craft variables which are set in <code>config/general.php</code>:</p>
+<pre class="language-php"><code class="language-php"> <span class="token string single-quoted-string">'assetsManifest'</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token keyword type-casting">array</span><span class="token punctuation">)</span><span class="token variable">$assetsManifest</span><span class="token punctuation">,</span><br> <span class="token string single-quoted-string">'assetsManifestLegacy'</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token keyword type-casting">array</span><span class="token punctuation">)</span><span class="token variable">$assetsManifestLegacy</span><span class="token punctuation">,</span></code></pre>
+<h3>_includes</h3>
+<h3>pages</h3>

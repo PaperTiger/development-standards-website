@@ -1,0 +1,49 @@
+<link href="../prism-vsc-dark-plus.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+<h1>Paper Tiger Development Standards</h1>
+<div class="nav">
+  <li><a href="../Getting-Started/index.html">Getting Started</a></li>
+  <li><a href="../Git-Standards/index.html">GIT & Github</a></li>
+  <li><a href="../Javascript/index.html">Javascript</a></li>
+  <li><a href="../Twig/index.html">Twig</a></li>
+  <li><a href="../CSS/index.html">CSS</a></li>
+  <li><a href="../Twig/index.html">CraftCMS</a></li>
+  <li><a href="../Twig/index.html">Webpack & Build Proccess</a></li>
+  <li><a href="../deployments/index.html">Deployments</a></li>
+</div>
+<h2>Git</h2>
+<h4>Sites</h4>
+<ul>
+<li><strong>Preproduction Sites</strong>: When developing a site that has not been released to production and is still in development, it is safe to code directly in <code>develop</code>. This ensures that all new code is automatically deployed to the staging site.</li>
+<li><strong>Production Sites</strong>: When editing production sites, use Gitflow workflow outlined below.</li>
+</ul>
+<h4>Branches</h4>
+<ul>
+<li><code>develop</code> - Used for staging releases.</li>
+<li><code>master</code> (sometimes <code>main</code>) - Used for production releases.</li>
+</ul>
+<hr>
+<h3>Gitflow</h3>
+<p>We use a modified Gitflow Workflow for branching and QA testing. Gitflow makes sure that unfinished features are never merged into the <code>master</code> branch.</p>
+<p>Example Scenarios:</p>
+<ul>
+<li><strong>Feature 1</strong>: A developer has been working on <code>Feature 1</code> for months, all his code is on his own branch but has been merging into <code>develop</code> to QA his work on the staging site and it is not ready to be pushed live.</li>
+<li><strong>Feature 2</strong>: There is a new feature that needs to be added to the homepage ASAP. In order to add this new feature, the client wants to be able to QA the work on a staging URL before it is released to the production site. We cannot work directly on the <code>develop</code> branch because this feature needs to be released before <code>Feature 1</code> is finished and since <code>Feature 1</code> is not finished, we need to ensure that none of <code>Feature 1</code> code is released to production. We also cannot branch off <code>develop</code> because this poses the same problem where <code>Feature 1</code> code will be present.</li>
+</ul>
+<h4>Using Gitflow</h4>
+<ul>
+<li>Branch off <code>master</code> for new features: <code>git checkout master &amp;&amp; git checkout -b feature-branch</code>.</li>
+<li>Merge <code>feature-branch</code> into <code>develop</code> to QA on staging: <code>git checkout develop &amp;&amp; git merge feature-branch</code></li>
+<li>Merge <code>feature-branch</code> into <code>master</code> when QA is finished and is production ready: <code>git checkout master &amp;&amp; git merge feature-branch</code></li>
+</ul>
+<h4>Basic rules of Gitflow</h4>
+<ul>
+<li><span class="bad"><strong>Never Safe</strong></span> to merge <code>develop</code> into <code>feature-branch</code></li>
+<li><span class="bad"><strong>Never Safe</strong></span> to merge <code>develop</code> into <code>master</code></li>
+<li><span class="good"><strong>Always Safe</strong></span> to merge <code>master</code> into <code>feature-branch</code></li>
+<li><span class="good"><strong>Always Safe</strong></span> to merge <code>feature-branch</code> into <code>develop</code></li>
+<li><span class="good"><strong>Always Safe</strong></span> to merge <code>feature-branch</code> into <code>master</code> when <code>feature-branch</code> is production-ready</li>
+</ul>
+<hr>
+<h3>Hotfixes</h3>
+<p>Sometimes an urgent and/or small request comes through to fix something on production that doesn't need to be QA'd on staging. In these cases, it is OK to work directly in <code>master</code> and push your changes directly to production. When the work is done, make sure to merge <code>master</code> into <code>develop</code> so staging stays in sync with production.</p>

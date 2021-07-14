@@ -1,0 +1,52 @@
+<link href="../prism-vsc-dark-plus.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+<h1>Paper Tiger Development Standards</h1>
+<div class="nav">
+  <li><a href="../Getting-Started/index.html">Getting Started</a></li>
+  <li><a href="../Git-Standards/index.html">GIT & Github</a></li>
+  <li><a href="../Javascript/index.html">Javascript</a></li>
+  <li><a href="../Twig/index.html">Twig</a></li>
+  <li><a href="../CSS/index.html">CSS</a></li>
+  <li><a href="../Twig/index.html">CraftCMS</a></li>
+  <li><a href="../Twig/index.html">Webpack & Build Proccess</a></li>
+  <li><a href="../deployments/index.html">Deployments</a></li>
+</div>
+<h2>Getting Started</h2>
+<h3>.env</h3>
+<p>There should be a <code>.env</code> file in the root directory of the project. If there isn't copy <code>.env.example</code> and name it <code>.env</code>. Depending on the project (craft/wordpress/static) you should see different variables that are needed.</p>
+<p>The most important and only required variables to start are:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token assign-left variable">ENVIRONMENT</span><span class="token operator">=</span><span class="token string">"dev"</span><br><span class="token assign-left variable">SITE_NAME</span><span class="token operator">=</span><span class="token string">"Project Name"</span><br><span class="token assign-left variable">WEB_ROOT</span><span class="token operator">=</span><span class="token string">"/web"</span><br><span class="token assign-left variable">TEMPLATE_DIR</span><span class="token operator">=</span><span class="token string">"/templates"</span><br><span class="token assign-left variable">GENERATE_LEGACY</span><span class="token operator">=</span><span class="token string">"false"</span><br><span class="token assign-left variable">DEFAULT_SITE_URL</span><span class="token operator">=</span><span class="token string">"http://project-name.test"</span></code></pre>
+<h4><code>enviroment</code></h4>
+<pre class="language-bash"><code class="language-bash">dev<span class="token operator">|</span>development <span class="token comment"># Used for development (BrowserSync, source maps, live reload, etc)</span><br>production<span class="token operator">|</span>live <span class="token comment"># Used on production servers (minify/gzip, dynamic imports, file spliting)</span><br>stage<span class="token operator">|</span>staging <span class="token comment"># Used on staging server (file spliting, source maps)</span></code></pre>
+<h4><code>SITE_NAME</code></h4>
+<p>This variable is to defined the name of the project. This is used in different places depending on the type of project (craft/wordpress/static).</p>
+<p><code>WEB_ROOT</code> - Where the server accesses your app. This can change depending on the type of project:</p>
+<ul>
+<li>Craft: <code>/web</code></li>
+<li>Wordpress: <code>/wp-content</code></li>
+<li>Static: <code>/web</code></li>
+</ul>
+<p><code>TEMPLATE_DIR</code> - This is where you add your template or HTML files. These changes based on the type of project.</p>
+<ul>
+<li>Craft: <code>/templates</code></li>
+<li>Wordpress: <code>/wp-content</code></li>
+<li>Static: <code>/web</code> or where ever php/html files live.
+<code>GENERATE_LEGACY</code> - This a Boolean value, and tell Webpack to generate a legacy version of the JS assets so older browsers use ES6+
+<code>DEFAULT_SITE_URL</code> - This is the site URL being used to view the site.</li>
+</ul>
+<h1>Project Type</h1>
+<h2>Craft</h2>
+<p><code>composer i</code> Install all dependencies to run.</p>
+<link href="../prism-vsc-dark-plus.css" rel="stylesheet">
+<link href="../style.css" rel="stylesheet">
+<h1>Paper Tiger Development Standards</h1>
+<div class="nav">
+  <li><a href="../Getting-Started/index.html">Getting Started</a></li>
+  <li><a href="../Git-Standards/index.html">GIT & Github</a></li>
+  <li><a href="../Javascript/index.html">Javascript</a></li>
+  <li><a href="../Twig/index.html">Twig</a></li>
+  <li><a href="../CSS/index.html">CSS</a></li>
+  <li><a href="../Twig/index.html">CraftCMS</a></li>
+  <li><a href="../Twig/index.html">Webpack & Build Proccess</a></li>
+  <li><a href="../deployments/index.html">Deployments</a></li>
+</div>
